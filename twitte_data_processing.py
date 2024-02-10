@@ -12,9 +12,11 @@ BOW=CountVectorizer()
 document_matrix=BOW.fit_transform(data["text"])
 #VOCABULARY FOR bow
 BOW.vocabulary_
+
+
 from sklearn.preprocessing import OneHotEncoder
 import numpy as np
-#fff
+
 # Initialize OneHotEncoder
 encoder = OneHotEncoder()
 
@@ -26,6 +28,8 @@ one_hot_encoded_data
 #Assignement2 : You need to perform BOW from the text column
 bow_vector=document_matrix.toarray()
 bow_vector
+
+
 #Here you can try N-grams also like 2-gram, 3-gram,4-gram
 bigram=CountVectorizer(ngram_range=(2,2))
 bigram_vocab=bigram.fit_transform(data["text"])
@@ -39,6 +43,8 @@ fourgram.vocabulary_
 bigram_vocab.toarray()
 trigram_vocab.toarray()
 fourgram_vocab.toarray()
+
+
 #At the end you have to perform the tf-idf 
 from sklearn.feature_extraction.text import TfidfVectorizer
 tifidf=TfidfVectorizer()
